@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+
+	<script type="text/javascript">
+		function draw(data) {
+
+			/* setup D3 */
+
+			"use strict";
+			var margin = 75,
+				width = 900 - margin,
+				height = 600 - margin;
+
+			d3.select("body")
+				.append("h2")
+				.text("Mature student enrolment as a proportion of total college enrolment in the States, 72-76")
+
+			var svg = d3.select("body")
+				.append("svg")
+					.attr("width", width + margin)
+					.attr("height", height + margin)
+				.append('g')
+					.attr('class', 'chart');
+
+			var data = [
+				{ "age":"under25", "year":"1972", "percentage of enrolment":72.0 },
+				{ "age":"over25", "year":"1972", "percentage of enrolment":28.0 },
+				{ "age":"under25", "year":"1973", "percentage of enrolment":70.8 },
+				{ "age":"over25", "year":"1973", "percentage of enrolment":29.2 },
+				{ "age":"under25", "year":"1974", "percentage of enrolment":67.2 },
+				{ "age":"over25", "year":"1974", "percentage of enrolment":32.8 },
+				{ "age":"under25", "year":"1975", "percentage of enrolment":66.4 },
+				{ "age":"over25", "year":"1975", "percentage of enrolment":33.6 },
+				{ "age":"under25", "year":"1976", "percentage of enrolment":67.0 },
+				{ "age":"over25", "year":"1976", "percentage of enrolment":33.0 },
+			];		
+			/* dimple.js code */
+
+			var myChart = new dimple.chart(svg, data);
+			var x = myChart.addTimeAxis("x", "year");
+			myChart.addMeasureAxis("y", "percentage of enrolment");
+			x.dateParseFormat = "%Y";
+            x.tickFormat = "%Y";				
+			myChart.addSeries("age", dimple.plot.area);
+			myChart.draw();
+
+		};
+	</script>
+</head>
+
+<body>
+	<script type="text/javascript">
+	draw();
+	</script>
+</body>
+</html>

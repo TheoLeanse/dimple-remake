@@ -1,0 +1,52 @@
+[  
+   {  
+      "age":"under25",
+      "year":"1972",
+      "percentage of enrolment":72.0
+   },
+   {  
+      "age":"over25",
+      "year":"1972",
+      "percentage of enrolment":28.0
+   },
+   {  
+      "age":"under25",
+      "year":"1973",
+      "percentage of enrolment":70.8
+   },
+   {  
+      "age":"over25",
+      "year":"1973",
+      "percentage of enrolment":29.2
+   },
+   {  
+      "age":"under25",
+      "year":"1974",
+      "percentage of enrolment":67.2
+   },
+   {  
+      "age":"over25",
+      "year":"1974",
+      "percentage of enrolment":32.8
+   },
+   {  
+      "age":"under25",
+      "year":"1975",
+      "percentage of enrolment":66.4
+   },
+   {  
+      "age":"over25",
+      "year":"1975",
+      "percentage of enrolment":33.6
+   },
+   {  
+      "age":"under25",
+      "year":"1976",
+      "percentage of enrolment":67.0
+   },
+   {  
+      "age":"over25",
+      "year":"1976",
+      "percentage of enrolment":33.0
+   }
+]
